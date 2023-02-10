@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Musicats</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Musicats</h1>
+    </div>
+    <div id="sound-container">
+      <div id="sound1" class="sound">
+        <img src="sound1.png" alt="Sound 1">
+        <audio id="audio1" src="sound1.mp3"></audio>
+      </div>
+      <div id="sound2" class="sound">
+        <img src="sound2.png" alt="Sound 2">
+        <audio id="audio2" src="sound2.mp3"></audio>
+      </div>
+      <!-- Add more sounds as needed -->
+    </div>
+    <div id="play-container">
+      <button id="play-button">Play</button>
+    </div>
+  </div>
+  <script>
+    // Add your custom JavaScript here
+    const playButton = document.getElementById("play-button");
+    playButton.addEventListener("click", function() {
+      // Play the audio for each sound that's been added to the mixer
+      const sounds = document.querySelectorAll(".sound");
+      sounds.forEach(function(sound) {
+        const audio = sound.querySelector("audio");
+        audio.currentTime = 0;
+        audio.play();
+      });
+    });
+  </script>
+</body>
+</html>
