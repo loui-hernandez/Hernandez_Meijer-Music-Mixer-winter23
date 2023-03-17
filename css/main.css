@@ -31,6 +31,14 @@ body {
     justify-content: center;
 }
 
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .instruments {
     width: 250px;
     height: 400px;
@@ -38,6 +46,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(32, 32, 32, 0.7);
 }
 
 .puzzle-board {
