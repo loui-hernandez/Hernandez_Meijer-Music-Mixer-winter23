@@ -1,41 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Musicats</title>
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Music Mixer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="container">
-    <div id="header">
-      <h1>Musicats</h1>
-    </div>
-    <div id="sound-container">
-      <div id="sound1" class="sound">
-        <img src="sound1.png" alt="Sound 1">
-        <audio id="audio1" src="sound1.mp3"></audio>
-      </div>
-      <div id="sound2" class="sound">
-        <img src="sound2.png" alt="Sound 2">
-        <audio id="audio2" src="sound2.mp3"></audio>
-      </div>
-      <!-- Add more sounds as needed -->
-    </div>
-    <div id="play-container">
-      <button id="play-button">Play</button>
-    </div>
-  </div>
-  <script>
-    // Add your custom JavaScript here
-    const playButton = document.getElementById("play-button");
-    playButton.addEventListener("click", function() {
-      // Play the audio for each sound that's been added to the mixer
-      const sounds = document.querySelectorAll(".sound");
-      sounds.forEach(function(sound) {
-        const audio = sound.querySelector("audio");
-        audio.currentTime = 0;
-        audio.play();
-      });
-    });
-  </script>
+    <header>
+        <h1>Interactive Music Mixer</h1>
+    </header>
+    <main>
+        <div class="audio-container">
+            <div class="audio-item" draggable="true">
+                <audio id="kick-place" src="audio/kick-place.mp3"></audio>
+                <img class="audio-icon" src="img/kick-place.png" alt="Clip 1">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item" draggable="true">
+                <audio id="snare-place" src="audio/snare-place.mp3"></audio>
+                <img class="audio-icon" src="img/snare-place.png" alt="Clip 1">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item" draggable="true">
+                <audio id="tops-place" src="audio/tops-place.mp3"></audio>
+                <img class="audio-icon" src="img/tops-place.png" alt="Clip 1">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item" draggable="true">
+                <audio id="bass-place" src="audio/bass-place.mp3"></audio>
+                <img class="audio-icon" src="img/bass-place.png" alt="Clip 1">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item" draggable="true">
+                <audio id="synth-place" src="audio/synth-place.mp3"></audio>
+                <img class="audio-icon" src="img/synth-place.png" alt="Clip 1">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item" draggable="true">
+                <audio id="pad-place" src="audio/pad-place.mp3"></audio>
+                <img class="audio-icon" src="img/pad-place.png" alt="Clip 1">
+          </div>
+            <!-- Add more audio items here -->
+        </div>
+        <div class="drop-area" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p>Drag and drop audio clips here</p>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
