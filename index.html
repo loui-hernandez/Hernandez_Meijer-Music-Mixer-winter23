@@ -1,52 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Music Mixer</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+    <title>Drag & Drop Interactive Music Mixer</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
-        <h1>Interactive Music Mixer</h1>
+
+    <header id="headLine">
+        <h1 class="hidden">drag and drop!</h1>
+        <img src="img/interactive-music-mixer-logo.svg" alt="Logo Music mixer" width="400">
     </header>
-    <main>
-        <div class="audio-container">
-            <div class="audio-item" draggable="true">
-                <audio id="kick-place" src="audio/kick-place.mp3"></audio>
-                <img class="audio-icon" src="img/kick-place.png" alt="Clip 1">
-          </div>
-          <div class="audio-container">
-            <div class="audio-item" draggable="true">
-                <audio id="snare-place" src="audio/snare-place.mp3"></audio>
-                <img class="audio-icon" src="img/snare-place.png" alt="Clip 1">
-          </div>
-          <div class="audio-container">
-            <div class="audio-item" draggable="true">
-                <audio id="tops-place" src="audio/tops-place.mp3"></audio>
-                <img class="audio-icon" src="img/tops-place.png" alt="Clip 1">
-          </div>
-          <div class="audio-container">
-            <div class="audio-item" draggable="true">
-                <audio id="bass-place" src="audio/bass-place.mp3"></audio>
-                <img class="audio-icon" src="img/bass-place.png" alt="Clip 1">
-          </div>
-          <div class="audio-container">
-            <div class="audio-item" draggable="true">
-                <audio id="synth-place" src="audio/synth-place.mp3"></audio>
-                <img class="audio-icon" src="img/synth-place.png" alt="Clip 1">
-          </div>
-          <div class="audio-container">
-            <div class="audio-item" draggable="true">
-                <audio id="pad-place" src="audio/pad-place.mp3"></audio>
-                <img class="audio-icon" src="img/pad-place.png" alt="Clip 1">
-          </div>
-            <!-- Add more audio items here -->
+
+    <section id="icons">
+        <!-- these are the draggable pieces -->
+        <div class="instruments">
+            <h2 class="hidden">Drag Zone</h2>
+            <h3>Drag up instruments! <br>Let the Beat Drop!</h3>
+            <img data-trackref="bass-place" id="bass" draggable src="img/guitar-bass-head.svg" class="instruments-icon" alt="Bass">
+            <img data-trackref="kick-place" id="kick" draggable src="img/otamatone.svg" class="instruments-icon" alt="Kick">
+            <img data-trackref="pad-place" id="pad" draggable src="img/guitar-head.svg" class="instruments-icon" alt="Pad">
+            <img data-trackref="snare-place" id="snare" draggable src="img/drum.svg" class="instruments-icon" alt="Snare">
+            <img data-trackref="synth-place" id="synth" draggable src="img/musical-keyboard.svg" class="instruments-icon" alt="Synthesizer">
+            <img data-trackref="tops-place" id="top" draggable src="img/piano-keys.svg" class="instruments-icon" alt="Tops">
         </div>
-        <div class="drop-area" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <p>Drag and drop audio clips here</p>
+
+        <!-- Audio Elements -->
+        <h2 class="hidden">Audio Tracks</h2>
+        <audio id="myAudio" src="audio/kick-place.mp3"></audio>
+
+        <!-- we want to drop the draggable pieces here -->
+        <div class="puzzle-board">
+            <h2 class="hidden">Drop Zone</h2>
+            <div class="drop-zone tl"></div>
+            <div class="drop-zone tr"></div>
+            <div class="drop-zone ml"></div>
+            <div class="drop-zone mr"></div>
+            <div class="drop-zone bl"></div>
+            <div class="drop-zone br"></div>
         </div>
-    </main>
-    <script src="scripts.js"></script>
+
+    </section>
+
+    <footer>
+        <h2 class="hidden">click me</h2>
+        <p>Click Me!</p>
+        <nav id="buttonHolder">
+            <img src="img/sound-wave.gif" data-trackref="backAudio" data-bgref="0" alt="Sound Wave">
+        </nav>
+    </footer>
+
+    <script src="script/main.js"></script>
+
 </body>
 </html>
+
