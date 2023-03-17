@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-    <title>Drag & Drop Interactive Music Mixer</title>
+    <title>Beat Drop Mixer</title>
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +19,8 @@
     <section id="icons">
         <!-- these are the draggable pieces -->
       <div class="icons-container">
-        <div class="instruments">
-            <h2 class="hidden">Drag Zone</h2>
+        <div class="instruments left icons">
+            <h2 class="hidden">Drag Zone Left</h2>
             <h3>Drag up instruments! <br>Let the Beat Drop!</h3>
             <img data-trackref="bass-place" id="bass" draggable src="img/guitar-bass-head.svg" class="instruments-icon" alt="Bass">
             <img data-trackref="kick-place" id="kick" draggable src="img/kick-drum.svg" class="instruments-icon" alt="Kick">
@@ -29,13 +29,6 @@
             <img data-trackref="synth-place" id="synth" draggable src="img/musical-keyboard.svg" class="instruments-icon" alt="Synthesizer">
             <img data-trackref="tops-place" id="top" draggable src="img/piano-keys.svg" class="instruments-icon" alt="Tops">
         </div>
-      </div>
-
-        <!-- Audio Elements -->
-        <h2 class="hidden">Audio Tracks</h2>
-        <audio id="myAudio" src="audio/kick-place.mp3"></audio>
-
-        <!-- we want to drop the draggable pieces here -->
         <div class="puzzle-board">
             <h2 class="hidden">Drop Zone</h2>
             <div class="drop-zone tl"></div>
@@ -45,6 +38,33 @@
             <div class="drop-zone bl"></div>
             <div class="drop-zone br"></div>
         </div>
+        <div class="instruments right-icons">
+          <h2 class="hidden">Drag Zone Right</h2>
+            <h3>Drag up instruments! <br>Let the Beat Drop!</h3>
+            <img data-trackref="bass-burst" id="bass-2" draggable src="img/guitar-bass-head.svg" class="instruments-icon" alt="Bass">
+            <img data-trackref="kick-burst" id="kick-2" draggable src="img/kick-drum.svg" class="instruments-icon" alt="Kick">
+            <img data-trackref="pad-burst" id="pad-2" draggable src="img/guitar-head.svg" class="instruments-icon" alt="Pad">
+            <img data-trackref="snare-burst" id="snare-2" draggable src="img/drum.svg" class="instruments-icon" alt="Snare">
+            <img data-trackref="synth-burst" id="synth-2" draggable src="img/musical-keyboard.svg" class="instruments-icon" alt="Synthesizer">
+            <img data-trackref="tops-burst" id="top-2" draggable src="img/piano-keys.svg" class="instruments-icon" alt="Tops">
+        </div>
+      </div>
+      <div class="icons-container bottom-icons-container">
+        <div class="instruments bottom-icons">
+          <h2 class="hidden">Drag Zone Bottom</h2>
+            <h3>Drag up instruments! <br>Let the Beat Drop!</h3>
+            <img data-trackref="bass-connect" id="bass-3" draggable src="img/guitar-bass-head.svg" class="instruments-icon" alt="Bass">
+            <img data-trackref="kick-connect" id="kick-3" draggable src="img/kick-drum.svg" class="instruments-icon" alt="Kick">
+            <img data-trackref="pad-connect" id="pad-3" draggable src="img/guitar-head.svg" class="instruments-icon" alt="Pad">
+            <img data-trackref="snare-connect" id="snare-3" draggable src="img/drum.svg" class="instruments-icon" alt="Snare">
+            <img data-trackref="synth-connect" id="synth-3" draggable src="img/musical-keyboard.svg" class="instruments-icon" alt="Synthesizer">
+            <img data-trackref="tops-connect" id="top-3" draggable src="img/piano-keys.svg" class="instruments-icon" alt="Tops">
+        </div>
+      </div>
+
+      <!-- Audio Elements -->
+      <h2 class="hidden">Audio Tracks</h2>
+      <audio id="myAudio" src="audio/kick-place.mp3"></audio>
 
     </section>
 

@@ -54,19 +54,25 @@ body {
 
 .puzzle-board {
     height: 300px;
+    width: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     background-color: #3e3e3f;
+    background-repeat: no-repeat;
     color: inherit;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
-.puzzle-board {
-    width: 500px;
-    background-repeat: no-repeat;
+.bottom-icons {
+  
+}
+
+.bottom-icons-container {
+  justify-content: center;
 }
 
 .instruments-icon {
