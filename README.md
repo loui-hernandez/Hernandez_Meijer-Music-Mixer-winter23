@@ -1,10 +1,10 @@
-## Musicats
+## Beat Drop Mixer
 
-Drag and drop music mixer with cats. Each cat "sings" by meowing. If you're not a cat person, stay away...
+Drag and drop music mixer. Lay down funky beats with the beat drop mixer - From an assortment of instruments and tracks, built your perfect beat, and enjoy the music!
 
 ## Usage
 
-TODO: Write usage instructions
+Listen to music, enjoy.
 
 ## Contributing
 
@@ -20,4 +20,4 @@ Created by Loui Hernandez and Nikolai Meijer
 
 ## License
 
-TODO: Write license
+Music Licence - Musical experts
