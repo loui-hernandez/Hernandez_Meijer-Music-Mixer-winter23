@@ -4,7 +4,6 @@
         instruments = document.querySelectorAll('.instruments img'),
         dropZones = document.querySelectorAll(".drop-zone");
 
-    // Change background image of the puzzle board
     function changeBgImg() {
         icons.style.backgroundImage = `url(img/backGround${this.dataset.bgref}.jpg)`;
     }
@@ -33,13 +32,13 @@
         if (this.childNodes.length === 0 && this.classList.contains("drop-zone")) {
             this.appendChild(droppedElement);
 
-            if (!audio) {
-                audio = document.createElement("audio");
-                audio.id = audioId;
-                audio.src = 'audio/' + droppedElement.dataset.trackref + '.mp3';
-                audio.loop = true;
-                document.body.appendChild(audio);
-            }
+        if (!audio) {
+            audio = document.createElement("audio");
+            audio.id = audioId;
+            audio.src = 'audio/' + droppedElement.dataset.trackref + '.mp3';
+            audio.loop = true;
+            document.body.appendChild(audio);
+        }
 
             audio.play();
         } else if (!this.classList.contains("drop-zone")) {
@@ -52,7 +51,6 @@
         }
     }
 
-    theSoundwave.forEach(item => item.addEventListener("click", changeBgImg));
     instruments.forEach(piece => piece.addEventListener('dragstart', allowDrag));
 
     dropZones.forEach(zone => {
