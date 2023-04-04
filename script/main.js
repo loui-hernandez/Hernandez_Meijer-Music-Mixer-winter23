@@ -1,32 +1,36 @@
 (() => {
-    let theSoundwave = document.querySelectorAll("#buttonHolder img"),
-        icons = document.querySelector(".puzzle-board"),
+    const theSoundwave = document.querySelectorAll("#buttonHolder img"),
+        icons = document.querySelector(".drop-area"),
         instruments = document.querySelectorAll('.instruments img'),
         dropZones = document.querySelectorAll(".drop-zone");
 
+    // Change background image of the puzzle board
     function changeBgImg() {
         icons.style.backgroundImage = `url(img/backGround${this.dataset.bgref}.jpg)`;
     }
 
+    // Allow dragging of instrument icons
     function allowDrag(event) {
         console.log("started dragging");
         event.dataTransfer.setData("draggedEl", this.id);
     }
 
+    // Allow drag over drop zones
     function allowDragOver(event) {
         event.preventDefault();
     }
 
+    // Allow dropping instrument icons on drop zones
     function allowDrop(event) {
         event.preventDefault();
         console.log("dropped");
 
-    let droppedElId = event.dataTransfer.getData("draggedEl");
-    let droppedElement = document.querySelector(`#${droppedElId}`);
-    let audioId = "audio_" + droppedElId;
-    let audio = document.getElementById(audioId);
+        const droppedElId = event.dataTransfer.getData("draggedEl");
+        const droppedElement = document.querySelector(`#${droppedElId}`);
+        const audioId = "audio_" + droppedElId;
+        let audio = document.getElementById(audioId);
 
-    if (this.childNodes.length === 0 && this.classList.contains("drop-zone")) {
+        if (this.childNodes.length === 0 && this.classList.contains("drop-zone")) {
             this.appendChild(droppedElement);
 
             if (!audio) {

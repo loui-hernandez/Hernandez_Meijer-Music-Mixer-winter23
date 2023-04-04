@@ -23,6 +23,13 @@ body {
 
 /* ---- Instruments and Puzzle Board ---- */
 
+#instructions {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
 #icons {
     width: 100%;
     text-align: center;
@@ -49,10 +56,11 @@ body {
     padding: 20px;
     border: 2px solid #fff;
     border-radius: 10px;
+    margin: 1rem;
     background-color: rgba(32, 32, 32, 0.7);
 }
 
-.puzzle-board {
+.drop-area {
     height: 300px;
     width: 500px;
     display: flex;
@@ -158,3 +166,4 @@ footer p {
 #buttonHolder img:hover {
     opacity:.5;
 }
+
